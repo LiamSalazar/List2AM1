@@ -62,7 +62,7 @@ Lista eliminarElemento(Elem e, Lista l){
     if(esvacia(l))
         return l;
     else if(SonIguales(e, cabeza(l)))
-        return resto(l);
+        return eliminarElemento(e, resto(l));
     else
         return cons(cabeza(l), eliminarElemento(e, resto(l)));
 }
