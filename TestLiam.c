@@ -40,6 +40,21 @@ int main(){
     Lista listaElemento = eliminarElemento(4, listaInvertida);
     printf("\n Lista sin elemento 4: \n");
     ImpLista(listaElemento);
+
+    // Caso de prueba de duplicados
+    Lista listaDuplicados = cons(1, cons(2, cons(3, cons(1, cons(4, cons(2, vacia()))))));
+    printf("\n Lista con duplicados: \n");
+    ImpLista(listaDuplicados);
+    // Eliminar duplicados
+    Lista listaValoresUnicos = eliminarDuplicados(listaDuplicados);
+    printf("\n Lista sin duplicados: \n");
+    ImpLista(listaValoresUnicos);
+
+    // Eliminar elemento si se repite
+    Lista listaSinElementoRepetido = eliminarSiRepite(listaDuplicados);
+    printf("\n Lista sin elemento repetido: \n");
+    ImpLista(listaSinElementoRepetido);
+    
     puts("");
     return 0;
 }
